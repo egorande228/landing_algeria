@@ -3,6 +3,7 @@
 import Link from "next/link";
 import MelbetAnimatedLogo from "./MelbetAnimatedLogo";
 import { useLanguage } from "./LanguageProvider";
+import { CASINO_REF_LINK, MAIL_LINK, SPORT_REF_LINK, TELEGRAM_LINK } from "@/lib/links";
 
 const footerCopy = {
   en: {
@@ -11,9 +12,9 @@ const footerCopy = {
     contactLabel: "Contact",
     homeLinks: [
       { href: "/#top", label: "Overview" },
-      { href: "/#casino", label: "Games" },
-      { href: "/#sports", label: "Sports" },
-      { href: "/#promos", label: "What we offer" },
+      { href: CASINO_REF_LINK, label: "Games" },
+      { href: SPORT_REF_LINK, label: "Sports" },
+      { href: CASINO_REF_LINK, label: "What we offer" },
     ],
     partnershipLinks: [
       { href: "/partnership#benefits", label: "Why Us" },
@@ -22,8 +23,8 @@ const footerCopy = {
       { href: "/partnership#tools", label: "Reporting" },
     ],
     contactLinks: [
-      { href: "#", label: "Contact on WhatsApp" },
-      { href: "#", label: "Contact on Telegram" },
+      { href: MAIL_LINK, label: "Mail" },
+      { href: TELEGRAM_LINK, label: "Telegram" },
     ],
   },
   fr: {
@@ -32,9 +33,9 @@ const footerCopy = {
     contactLabel: "Contact",
     homeLinks: [
       { href: "/#top", label: "Vue d'ensemble" },
-      { href: "/#casino", label: "Jeux" },
-      { href: "/#sports", label: "Sports" },
-      { href: "/#promos", label: "Nos offres" },
+      { href: CASINO_REF_LINK, label: "Jeux" },
+      { href: SPORT_REF_LINK, label: "Sports" },
+      { href: CASINO_REF_LINK, label: "Nos offres" },
     ],
     partnershipLinks: [
       { href: "/partnership#benefits", label: "Pourquoi nous" },
@@ -43,8 +44,8 @@ const footerCopy = {
       { href: "/partnership#tools", label: "Reporting" },
     ],
     contactLinks: [
-      { href: "#", label: "Contacter sur WhatsApp" },
-      { href: "#", label: "Contacter sur Telegram" },
+      { href: MAIL_LINK, label: "Mail" },
+      { href: TELEGRAM_LINK, label: "Telegram" },
     ],
   },
   ar: {
@@ -53,9 +54,9 @@ const footerCopy = {
     contactLabel: "التواصل",
     homeLinks: [
       { href: "/#top", label: "نظرة عامة" },
-      { href: "/#casino", label: "الألعاب" },
-      { href: "/#sports", label: "الرياضة" },
-      { href: "/#promos", label: "ما نقدمه" },
+      { href: CASINO_REF_LINK, label: "الألعاب" },
+      { href: SPORT_REF_LINK, label: "الرياضة" },
+      { href: CASINO_REF_LINK, label: "ما نقدمه" },
     ],
     partnershipLinks: [
       { href: "/partnership#benefits", label: "لماذا نحن" },
@@ -64,8 +65,8 @@ const footerCopy = {
       { href: "/partnership#tools", label: "التقارير" },
     ],
     contactLinks: [
-      { href: "#", label: "تواصل عبر واتساب" },
-      { href: "#", label: "تواصل عبر تيليجرام" },
+      { href: MAIL_LINK, label: "Mail" },
+      { href: TELEGRAM_LINK, label: "Telegram" },
     ],
   },
 } as const;
@@ -101,7 +102,7 @@ export default function Footer() {
             <div className="mt-5 flex flex-col gap-3">
               {copy.homeLinks.map((link) => (
                 <Link
-                  key={link.href}
+                  key={`${link.href}-${link.label}`}
                   href={link.href}
                   className="w-fit text-start text-[15px] text-white/82 transition-colors duration-300 hover:text-[#D7F76B]"
                 >

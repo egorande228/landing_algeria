@@ -584,9 +584,9 @@ export const dictionary = {
       },
     },
     text: {
-      en: "Talk to us on Telegram or WhatsApp and we will help you choose the right route, explain the next steps, and get started clearly.",
-      ar: "تواصل معنا عبر تيليجرام أو واتساب وسنساعدك على اختيار المسار المناسب وشرح الخطوات التالية والبدء بشكل واضح.",
-      fr: "Parlez avec nous sur Telegram ou WhatsApp et nous vous aiderons a choisir la bonne voie, comprendre la suite et commencer clairement.",
+      en: "Talk to us on Telegram or email and we will help you choose the right route, explain the next steps, and get started clearly.",
+      ar: "تواصل معنا عبر تيليجرام أو البريد الإلكتروني وسنساعدك على اختيار المسار المناسب وشرح الخطوات التالية والبدء بشكل واضح.",
+      fr: "Parlez avec nous sur Telegram ou par email et nous vous aiderons a choisir la bonne voie, comprendre la suite et commencer clairement.",
     },
     supportItems: {
       en: ["Clear next steps", "Direct manager reply", "Simple onboarding"],
@@ -599,9 +599,9 @@ export const dictionary = {
       fr: "Parler sur Telegram",
     },
     whatsappCta: {
-      en: "Talk on WhatsApp",
-      ar: "تواصل عبر واتساب",
-      fr: "Parler sur WhatsApp",
+      en: "Mail",
+      ar: "Mail",
+      fr: "Mail",
     },
   },
 

@@ -4,9 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/app/layout/LanguageProvider";
 import { FadeUp, StaggerReveal } from "@/app/motion/Reveal";
-
-const TELEGRAM_LINK = "#";
-const WHATSAPP_LINK = "#";
+import { MAIL_LINK, TELEGRAM_LINK } from "@/lib/links";
 
 function LiveDot() {
   return (
@@ -23,7 +21,7 @@ function ContactButton({
   label,
 }: {
   href: string;
-  icon: string;
+  icon?: string;
   label: string;
 }) {
   return (
@@ -33,13 +31,15 @@ function ContactButton({
       className="group inline-flex min-h-[58px] w-full items-center justify-center overflow-hidden rounded-[16px] border border-[#2BB673]/28 bg-[#2BB673] px-5 text-[#04110b] shadow-[0_14px_30px_rgba(43,182,115,0.16)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#39C884] sm:w-auto sm:min-w-[190px]"
     >
       <div className="flex w-full items-center justify-center gap-3">
-        <Image
-          src={icon}
-          alt={label}
-          width={20}
-          height={20}
-          className="h-5 w-5 shrink-0 object-contain"
-        />
+        {icon ? (
+          <Image
+            src={icon}
+            alt={label}
+            width={20}
+            height={20}
+            className="h-5 w-5 shrink-0 object-contain"
+          />
+        ) : null}
         <span className="lp-button whitespace-nowrap leading-[1.35]">
           {label}
         </span>
@@ -123,8 +123,7 @@ export default function FinalCtaSection() {
                 />
 
                 <ContactButton
-                  href={WHATSAPP_LINK}
-                  icon="/whatsapp.png"
+                  href={MAIL_LINK}
                   label={t.finalCta.whatsappCta[language]}
                 />
               </div>

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import MelbetAnimatedLogo from "./MelbetAnimatedLogo";
 import { useLanguage } from "./LanguageProvider";
+import { CASINO_REF_LINK, MAIL_LINK, SPORT_REF_LINK } from "@/lib/links";
 
 const topBarCopy = {
   en: {
@@ -12,9 +13,9 @@ const topBarCopy = {
     openMenu: "Open menu",
     homeLinks: [
       { href: "/#top", label: "Overview" },
-      { href: "/#casino", label: "Games" },
-      { href: "/#sports", label: "Sports" },
-      { href: "/#promos", label: "What we offer" },
+      { href: CASINO_REF_LINK, label: "Games" },
+      { href: SPORT_REF_LINK, label: "Sports" },
+      { href: CASINO_REF_LINK, label: "What we offer" },
     ],
     partnershipLinks: [
       { href: "/partnership#benefits", label: "Why Us" },
@@ -28,9 +29,9 @@ const topBarCopy = {
     openMenu: "Ouvrir le menu",
     homeLinks: [
       { href: "/#top", label: "Vue d'ensemble" },
-      { href: "/#casino", label: "Jeux" },
-      { href: "/#sports", label: "Sports" },
-      { href: "/#promos", label: "Nos offres" },
+      { href: CASINO_REF_LINK, label: "Jeux" },
+      { href: SPORT_REF_LINK, label: "Sports" },
+      { href: CASINO_REF_LINK, label: "Nos offres" },
     ],
     partnershipLinks: [
       { href: "/partnership#benefits", label: "Pourquoi nous" },
@@ -44,9 +45,9 @@ const topBarCopy = {
     openMenu: "فتح القائمة",
     homeLinks: [
       { href: "/#top", label: "نظرة عامة" },
-      { href: "/#casino", label: "الألعاب" },
-      { href: "/#sports", label: "الرياضة" },
-      { href: "/#promos", label: "ما نقدمه" },
+      { href: CASINO_REF_LINK, label: "الألعاب" },
+      { href: SPORT_REF_LINK, label: "الرياضة" },
+      { href: CASINO_REF_LINK, label: "ما نقدمه" },
     ],
     partnershipLinks: [
       { href: "/partnership#benefits", label: "لماذا نحن" },
@@ -177,7 +178,7 @@ export default function TopBar() {
   const copy = topBarCopy[language as TopBarLanguage];
   const isArabic = language === "ar";
   const isPartnershipPage = pathname.startsWith("/partnership");
-  const ctaHref = isPartnershipPage ? "/partnership#final-cta" : "/#play";
+  const ctaHref = isPartnershipPage ? MAIL_LINK : CASINO_REF_LINK;
 
   const navItems = useMemo<NavItem[]>(
     () => [
@@ -299,7 +300,7 @@ export default function TopBar() {
                       <div className="grid gap-[6px] rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.015)),radial-gradient(circle_at_top,rgba(43,182,115,0.1),transparent_58%)] p-[10px] shadow-[0_24px_60px_rgba(0,0,0,0.24)] backdrop-blur-[18px]">
                         {item.children.map((child) => (
                           <Link
-                            key={child.href}
+                            key={`${child.href}-${child.label}`}
                             href={child.href}
                             className="inline-flex min-h-[38px] items-center rounded-[14px] px-3 text-[14px] text-white/72 transition-[color,background-color] duration-200 hover:bg-[#2BB673]/10 hover:text-white"
                           >
@@ -428,7 +429,7 @@ export default function TopBar() {
                         <div className="grid gap-[6px] border-t border-white/6 pt-2">
                           {item.children.map((child) => (
                             <Link
-                              key={child.href}
+                              key={`${child.href}-${child.label}`}
                               href={child.href}
                               onClick={() => {
                                 setMenuOpen(false);

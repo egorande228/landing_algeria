@@ -13,6 +13,7 @@ import {
   type HomeLanguage,
   type RewardCardData,
 } from "@/lib/home-content";
+import { CASINO_REF_LINK, SPORT_REF_LINK } from "@/lib/links";
 import { useLanguage } from "./layout/LanguageProvider";
 import { FadeUp, StaggerReveal } from "./motion/Reveal";
 
@@ -371,7 +372,10 @@ function RewardVisualCard({
   className?: string;
 }) {
   return (
-    <div
+    <a
+      href={CASINO_REF_LINK}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`group relative overflow-hidden rounded-[24px] border border-white/8 bg-[#09110c] shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition duration-300 hover:-translate-y-1 hover:border-[#2BB673]/22 ${className ?? ""}`}
     >
       <div
@@ -397,7 +401,7 @@ function RewardVisualCard({
           {ctaLabel}
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -419,6 +423,10 @@ function RewardShowcase() {
       ))}
     </div>
   );
+}
+
+function getGameCardHref(card: (typeof casinoCardsByLanguage)[HomeLanguage][number]) {
+  return card.imageSrc === "/games/esports.png" ? SPORT_REF_LINK : CASINO_REF_LINK;
 }
 
 function fillTeamLabel(template: string, team: string) {
@@ -454,9 +462,12 @@ function SportsShowcase() {
   return (
     <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
       <FadeUp className="h-full">
-        <div
+        <a
+          href={SPORT_REF_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
           dir={isArabic ? "rtl" : "ltr"}
-          className="relative h-full overflow-hidden rounded-[32px] border border-white/8 bg-[linear-gradient(135deg,rgba(43,182,115,0.16),rgba(255,255,255,0.04)_46%,rgba(244,67,54,0.1))] p-5 shadow-[0_28px_80px_rgba(0,0,0,0.28)] sm:p-6"
+          className="relative block h-full overflow-hidden rounded-[32px] border border-white/8 bg-[linear-gradient(135deg,rgba(43,182,115,0.16),rgba(255,255,255,0.04)_46%,rgba(244,67,54,0.1))] p-5 shadow-[0_28px_80px_rgba(0,0,0,0.28)] transition hover:-translate-y-1 hover:border-[#2BB673]/24 sm:p-6"
         >
           <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[#2BB673]/45 to-transparent" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_16%,rgba(43,182,115,0.18),transparent_28%),radial-gradient(circle_at_82%_20%,rgba(255,255,255,0.08),transparent_24%)]" />
@@ -565,14 +576,17 @@ function SportsShowcase() {
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </FadeUp>
 
       <div className="grid gap-4">
         <FadeUp>
-          <div
+          <a
+            href={SPORT_REF_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             dir={isArabic ? "rtl" : "ltr"}
-            className="al-ticket-float relative overflow-hidden rounded-[28px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(0,0,0,0.28))] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.18)] sm:p-6"
+            className="al-ticket-float relative block overflow-hidden rounded-[28px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(0,0,0,0.28))] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:border-[#2BB673]/24 sm:p-6"
           >
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(43,182,115,0.14),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.03),transparent_62%)]" />
             <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/12 to-transparent" />
@@ -624,7 +638,7 @@ function SportsShowcase() {
                 )}
               </div>
             </div>
-          </div>
+          </a>
         </FadeUp>
 
         <FadeUp>
@@ -640,16 +654,19 @@ function SportsShowcase() {
                 {showcase.listTitle}
               </div>
               <div className="mt-4 space-y-2">
-                {showcase.listItems.map((item, idx) => (
-                  <div
+                {showcase.listItems.map((item) => (
+                  <a
                     key={item}
+                    href={SPORT_REF_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group rounded-[16px] border border-white/8 bg-white/[0.04] px-3.5 py-2.5 text-[13px] font-medium text-white/72 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition hover:bg-white/[0.065] hover:border-white/12"
                   >
                     <div className="flex items-center gap-3">
                       <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#2BB673] group-hover:shadow-[0_0_8px_rgba(43,182,115,0.6)] transition"></span>
                       <span>{item}</span>
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -731,13 +748,13 @@ export default function Home() {
               <FadeUp>
                 <div className="mt-8 grid gap-3 sm:flex">
                   <Link
-                    href="#play"
+                    href={CASINO_REF_LINK}
                     className="inline-flex min-h-[56px] items-center justify-center rounded-[18px] bg-[#2BB673] px-6 text-[18px] font-semibold text-[#04110b] shadow-[0_16px_36px_rgba(43,182,115,0.18)] transition hover:-translate-y-0.5 hover:bg-[#39C884]"
                   >
                     {t.primary}
                   </Link>
                   <Link
-                    href="#sports"
+                    href={SPORT_REF_LINK}
                     className="inline-flex min-h-[56px] items-center justify-center rounded-[18px] border border-white/10 bg-white/[0.05] px-6 text-[18px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.08]"
                   >
                     {t.secondary}
@@ -772,7 +789,12 @@ export default function Home() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {casinoCards.map((card) => (
             <FadeUp key={card.title}>
-              <div className="group h-full overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.035] shadow-[0_18px_50px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-1 hover:border-[#2BB673]/24">
+              <a
+                href={getGameCardHref(card)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block h-full overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.035] shadow-[0_18px_50px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-1 hover:border-[#2BB673]/24"
+              >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={card.imageSrc}
@@ -804,7 +826,7 @@ export default function Home() {
                     {ui.casinoOpenSection}
                   </div>
                 </div>
-              </div>
+              </a>
             </FadeUp>
           ))}
         </div>
@@ -840,7 +862,7 @@ export default function Home() {
             <FadeUp>
               <div className="mt-8 flex justify-center">
                 <Link
-                  href="#top"
+                  href={CASINO_REF_LINK}
                   className="inline-flex min-h-[56px] w-full items-center justify-center rounded-[18px] bg-[#2BB673] px-7 text-[18px] font-semibold text-[#04110b] transition hover:bg-[#39C884] sm:w-auto"
                 >
                   {t.primary}

@@ -13,7 +13,7 @@ import {
   type HomeLanguage,
   type RewardCardData,
 } from "@/lib/home-content";
-import { CASINO_REF_LINK, SPORT_REF_LINK } from "@/lib/links";
+import { CASINO_REF_LINK, SPORT_REF_LINK, TELEGRAM_LINK } from "@/lib/links";
 import { useLanguage } from "./layout/LanguageProvider";
 import { FadeUp, StaggerReveal } from "./motion/Reveal";
 
@@ -759,6 +759,14 @@ export default function Home() {
                   >
                     {t.secondary}
                   </Link>
+                  <a
+                    href={TELEGRAM_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-[56px] items-center justify-center rounded-[18px] border border-white/10 bg-white/[0.05] px-6 text-[18px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.08]"
+                  >
+                    Telegram
+                  </a>
                 </div>
               </FadeUp>
             </StaggerReveal>

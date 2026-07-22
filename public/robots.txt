@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# LLM reference
+# https://algeria-melbet.com/llms.txt
+
 Sitemap: https://algeria-melbet.com/sitemap.xml

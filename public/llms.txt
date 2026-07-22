@@ -1,10 +1,17 @@
 # algeria-melbet.com
 
-Public landing pages for `algeria-melbet.com` cover live football, casino games, offers, and partnership information for Algeria. The visible interface supports English, French, and Arabic on the same public URLs.
+algeria-melbet.com publishes two public landing pages for Algeria. The homepage covers live football, casino games, offers, rewards, and mobile-first access. The partnership page covers benefits, onboarding steps, partnership models, reporting, and contact paths. The visible interface supports English, French, and Arabic on the same public URLs.
 
-## Preferred entry points
-- https://algeria-melbet.com/ : Homepage with live football, casino games, offers, and mobile-first access content.
-- https://algeria-melbet.com/partnership/ : Partnership page with benefits, onboarding steps, partnership models, reporting, and contact paths.
+## Canonical pages
+- https://algeria-melbet.com/
+  Homepage for live football, casino games, offers, and rewards on mobile.
+- https://algeria-melbet.com/partnership/
+  Partnership page for benefits, onboarding, reporting, and contact routes.
+
+## Site notes
+- Public pages are visitor-facing landing pages.
+- Primary audiences are players on the homepage and prospective partners on the partnership page.
+- The same public URLs support English, French, and Arabic content in the interface.
 
 ## Discovery
 - Sitemap: https://algeria-melbet.com/sitemap.xml

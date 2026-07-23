@@ -94,14 +94,9 @@ export function StaggerReveal({
 }: RevealProps) {
   if (immediate) {
     return (
-      <motion.div
-        className={className}
-        variants={containerVariants}
-        initial="hidden"
-        animate="show"
-      >
+      <div className={className}>
         {children}
-      </motion.div>
+      </div>
     );
   }
 

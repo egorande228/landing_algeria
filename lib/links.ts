@@ -1,8 +1,8 @@
 export const SPORT_REF_LINK =
-  "https://refpa3665.com/L?tag=d_4092175m_66329c_AlgeriaSport";
+  "/api/go/sports";
 
 export const CASINO_REF_LINK =
-  "https://refpa3665.com/L?tag=d_4092175m_66329c_MLBAlgeria26";
+  "/api/go/casino";
 
 export const TELEGRAM_LINK = "https://t.me/Teamcash_ALGERIA";
 

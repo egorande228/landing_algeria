@@ -374,8 +374,9 @@ function RewardVisualCard({
   return (
     <a
       href={CASINO_REF_LINK}
+      prefetch={false}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="sponsored nofollow noopener"
       className={`group relative overflow-hidden rounded-[24px] border border-white/8 bg-[#09110c] shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition duration-300 hover:-translate-y-1 hover:border-[#2BB673]/22 ${className ?? ""}`}
     >
       <div
@@ -464,8 +465,9 @@ function SportsShowcase() {
       <FadeUp className="h-full">
         <a
           href={SPORT_REF_LINK}
+          prefetch={false}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="sponsored nofollow noopener"
           dir={isArabic ? "rtl" : "ltr"}
           className="relative block h-full overflow-hidden rounded-[32px] border border-white/8 bg-[linear-gradient(135deg,rgba(43,182,115,0.16),rgba(255,255,255,0.04)_46%,rgba(244,67,54,0.1))] p-5 shadow-[0_28px_80px_rgba(0,0,0,0.28)] transition hover:-translate-y-1 hover:border-[#2BB673]/24 sm:p-6"
         >
@@ -583,8 +585,9 @@ function SportsShowcase() {
         <FadeUp>
           <a
             href={SPORT_REF_LINK}
+            prefetch={false}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="sponsored nofollow noopener"
             dir={isArabic ? "rtl" : "ltr"}
             className="al-ticket-float relative block overflow-hidden rounded-[28px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(0,0,0,0.28))] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.18)] transition hover:-translate-y-1 hover:border-[#2BB673]/24 sm:p-6"
           >
@@ -658,8 +661,9 @@ function SportsShowcase() {
                   <a
                     key={item}
                     href={SPORT_REF_LINK}
+                    prefetch={false}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="sponsored nofollow noopener"
                     className="group rounded-[16px] border border-white/8 bg-white/[0.04] px-3.5 py-2.5 text-[13px] font-medium text-white/72 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition hover:bg-white/[0.065] hover:border-white/12"
                   >
                     <div className="flex items-center gap-3">
@@ -749,12 +753,18 @@ export default function Home() {
                 <div className="mt-8 grid gap-3 sm:flex">
                   <Link
                     href={CASINO_REF_LINK}
+                    prefetch={false}
+                    target="_blank"
+                    rel="sponsored nofollow noopener"
                     className="inline-flex min-h-[56px] items-center justify-center rounded-[18px] bg-[#2BB673] px-6 text-[18px] font-semibold text-[#04110b] shadow-[0_16px_36px_rgba(43,182,115,0.18)] transition hover:-translate-y-0.5 hover:bg-[#39C884]"
                   >
                     {t.primary}
                   </Link>
                   <Link
                     href={SPORT_REF_LINK}
+                    prefetch={false}
+                    target="_blank"
+                    rel="sponsored nofollow noopener"
                     className="inline-flex min-h-[56px] items-center justify-center rounded-[18px] border border-white/10 bg-white/[0.05] px-6 text-[18px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.08]"
                   >
                     {t.secondary}
@@ -812,8 +822,9 @@ export default function Home() {
             <FadeUp key={card.title}>
               <a
                 href={getGameCardHref(card)}
+                prefetch={false}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="sponsored nofollow noopener"
                 className="group block h-full overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.035] shadow-[0_18px_50px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-1 hover:border-[#2BB673]/24"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -884,6 +895,9 @@ export default function Home() {
               <div className="mt-8 flex justify-center">
                 <Link
                   href={CASINO_REF_LINK}
+                  prefetch={false}
+                  target="_blank"
+                  rel="sponsored nofollow noopener"
                   className="inline-flex min-h-[56px] w-full items-center justify-center rounded-[18px] bg-[#2BB673] px-7 text-[18px] font-semibold text-[#04110b] transition hover:bg-[#39C884] sm:w-auto"
                 >
                   {t.primary}

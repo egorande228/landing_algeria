@@ -374,7 +374,6 @@ function RewardVisualCard({
   return (
     <a
       href={CASINO_REF_LINK}
-      prefetch={false}
       target="_blank"
       rel="sponsored nofollow noopener"
       className={`group relative overflow-hidden rounded-[24px] border border-white/8 bg-[#09110c] shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition duration-300 hover:-translate-y-1 hover:border-[#2BB673]/22 ${className ?? ""}`}
@@ -465,7 +464,6 @@ function SportsShowcase() {
       <FadeUp className="h-full">
         <a
           href={SPORT_REF_LINK}
-          prefetch={false}
           target="_blank"
           rel="sponsored nofollow noopener"
           dir={isArabic ? "rtl" : "ltr"}
@@ -585,7 +583,6 @@ function SportsShowcase() {
         <FadeUp>
           <a
             href={SPORT_REF_LINK}
-            prefetch={false}
             target="_blank"
             rel="sponsored nofollow noopener"
             dir={isArabic ? "rtl" : "ltr"}
@@ -661,7 +658,6 @@ function SportsShowcase() {
                   <a
                     key={item}
                     href={SPORT_REF_LINK}
-                    prefetch={false}
                     target="_blank"
                     rel="sponsored nofollow noopener"
                     className="group rounded-[16px] border border-white/8 bg-white/[0.04] px-3.5 py-2.5 text-[13px] font-medium text-white/72 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition hover:bg-white/[0.065] hover:border-white/12"
@@ -822,7 +818,6 @@ export default function Home() {
             <FadeUp key={card.title}>
               <a
                 href={getGameCardHref(card)}
-                prefetch={false}
                 target="_blank"
                 rel="sponsored nofollow noopener"
                 className="group block h-full overflow-hidden rounded-[24px] border border-white/8 bg-white/[0.035] shadow-[0_18px_50px_rgba(0,0,0,0.22)] transition duration-300 hover:-translate-y-1 hover:border-[#2BB673]/24"

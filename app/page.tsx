@@ -426,7 +426,7 @@ function RewardShowcase() {
 }
 
 function getGameCardHref(card: (typeof casinoCardsByLanguage)[HomeLanguage][number]) {
-  return card.imageSrc === "/games/esports.png" ? SPORT_REF_LINK : CASINO_REF_LINK;
+  return card.imageSrc === "/games/esports.jpg" ? SPORT_REF_LINK : CASINO_REF_LINK;
 }
 
 function fillTeamLabel(template: string, team: string) {

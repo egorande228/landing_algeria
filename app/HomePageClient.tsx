@@ -662,7 +662,7 @@ function SportsShowcase() {
                     href={SPORT_REF_LINK}
                     target="_blank"
                     rel="sponsored nofollow noopener"
-                    className="group rounded-[16px] border border-white/8 bg-white/[0.04] px-3.5 py-2.5 text-[13px] font-medium text-white/72 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition hover:bg-white/[0.065] hover:border-white/12"
+                    className="group block w-full rounded-[16px] border border-white/8 bg-white/[0.04] px-3.5 py-2.5 text-[13px] font-medium text-white/72 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition hover:bg-white/[0.065] hover:border-white/12"
                   >
                     <div className="flex items-center gap-3">
                       <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#2BB673] group-hover:shadow-[0_0_8px_rgba(43,182,115,0.6)] transition"></span>

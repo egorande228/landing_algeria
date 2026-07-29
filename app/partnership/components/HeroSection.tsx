@@ -244,7 +244,7 @@ export default function HeroSection() {
                         : "max-w-[13ch] sm:max-w-[24ch] md:max-w-[28ch] lg:mx-0 lg:max-w-[20ch] xl:max-w-[100ch]"
                     }`}
                   >
-                    <p className="text-[32px] font-semibold leading-[0.98] tracking-[-0.035em] text-[#F5F7F4] sm:text-[48px] lg:text-[58px] xl:text-[66px]">
+                    <h1 className="text-[32px] font-semibold leading-[0.98] tracking-[-0.035em] text-[#F5F7F4] sm:text-[48px] lg:text-[58px] xl:text-[66px]">
                       <>
                         {t.hero.before[language]}{" "}
                         <span className="glow-green text-[#2BB673]">
@@ -255,7 +255,7 @@ export default function HeroSection() {
                           {t.hero.glowTwo[language]}
                         </span>
                       </>
-                    </p>
+                    </h1>
                   </div>
                 </FadeUp>
 

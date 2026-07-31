@@ -409,10 +409,17 @@ export const homeGuideByLanguage = {
     languageLabel: "Languages",
     languageValue: "English, French, and Arabic",
     reviewedLabel: "Reviewed",
-    reviewedValue: "2026-07-29",
+    reviewedValue: "2026-07-31",
     title: "What can you do on Melbet Algeria?",
     intro:
-      "Melbet Algeria is a mobile-first landing page for visitors who want quick access to live football, casino games, and current offers from one place. From the homepage you can move straight to sports markets, browse casino and slots sections, open live games, and check esports options without a long route. The page also highlights reward categories already visible across the site, including a welcome bonus, football boost, cashback, and VIP reward, so you can compare the main offer types before leaving the landing page. If you want a faster overview, the same screen keeps live-match examples, game previews, and shortcut buttons close together so sports and casino routes stay easy to reach on your phone. English, French, and Arabic interfaces are available on the same public URL, which helps visitors switch language without losing access to the core sports, games, and offers overview.",
+      "Melbet Algeria is a mobile-first landing page for quick access to live football, casino games, and current offers. From the homepage you can move into sports markets, open casino and slots sections, check live games, and review esports options without a long route. The same public URL keeps reward categories, live-match examples, and language switching close together so visitors can compare the main routes before they leave the landing page.",
+    summaryLabel: "Quick homepage answer",
+    summaryPoints: [
+      "Live football examples, lineups, markets, and featured odds stay visible on the homepage.",
+      "Casino, slots, live games, and esports cards are grouped into one mobile-first flow.",
+      "The page highlights welcome bonus, football boost, cashback, and VIP reward categories already visible across the site.",
+      "English, French, and Arabic interfaces are available on the same public URL.",
+    ],
     tableTitle: "Quick page guide",
     columns: {
       area: "Area",
@@ -464,10 +471,17 @@ export const homeGuideByLanguage = {
     languageLabel: "Langues",
     languageValue: "Anglais, francais et arabe",
     reviewedLabel: "Revision",
-    reviewedValue: "2026-07-29",
+    reviewedValue: "2026-07-31",
     title: "Que pouvez-vous faire sur Melbet Algerie ?",
     intro:
-      "Melbet Algerie est une landing page mobile pour les visiteurs qui veulent un acces rapide au football en direct, aux jeux de casino et aux offres depuis un seul point d'entree. Depuis l'accueil, vous pouvez ouvrir les marches sport, parcourir les sections casino et slots, lancer les jeux live et consulter l'esports sans trajet inutile. La page met aussi en avant les categories d'offres deja visibles sur le site, dont bonus de bienvenue, boost football, cashback et recompense VIP, afin de comparer rapidement les principales options. Si vous voulez une vue plus directe, les exemples de matchs, les apercus de jeux et les raccourcis restent proches les uns des autres pour garder les routes sport et casino faciles a atteindre sur mobile. L'interface reste disponible en anglais, francais et arabe sur la meme URL publique.",
+      "Melbet Algerie est une landing page mobile pour acceder rapidement au football en direct, aux jeux de casino et aux offres en cours. Depuis l'accueil, vous pouvez ouvrir les marches sport, parcourir les sections casino et slots, lancer les jeux live et consulter l'esports sans trajet inutile. La meme URL publique garde aussi les categories d'offres, les exemples de matchs et le changement de langue a portee de main pour comparer les routes principales avant de continuer.",
+    summaryLabel: "Reponse rapide",
+    summaryPoints: [
+      "Les exemples de football live, compositions, marches et cotes visibles restent reunis sur l'accueil.",
+      "Casino, slots, jeux live et esports sont regroupes dans le meme parcours mobile.",
+      "La page met deja en avant bonus de bienvenue, boost football, cashback et recompense VIP.",
+      "Les interfaces anglais, francais et arabe restent disponibles sur la meme URL publique.",
+    ],
     tableTitle: "Guide rapide de la page",
     columns: {
       area: "Zone",
@@ -519,10 +533,17 @@ export const homeGuideByLanguage = {
     languageLabel: "اللغات",
     languageValue: "الإنجليزية والفرنسية والعربية",
     reviewedLabel: "تمت المراجعة",
-    reviewedValue: "2026-07-29",
+    reviewedValue: "2026-07-31",
     title: "ماذا يمكنك أن تفعل على ميلبيت الجزائر؟",
     intro:
-      "ميلبيت الجزائر صفحة هبوط موجهة للجوال لمن يريد وصولاً سريعاً إلى كرة القدم المباشرة وألعاب الكازينو والعروض من مكان واحد. من الصفحة الرئيسية يمكنك الانتقال مباشرة إلى أسواق الرياضة، وتصفح أقسام الكازينو والسلوتس، وفتح الألعاب المباشرة، ومتابعة خيارات الرياضات الإلكترونية بدون مسار طويل. كما تعرض الصفحة فئات المكافآت الظاهرة بالفعل على الموقع، ومنها مكافأة الترحيب وتعزيز كرة القدم والكاش باك ومكافأة VIP، حتى تتمكن من مقارنة أنواع العروض الأساسية قبل الانتقال إلى وجهتك التالية. وإذا كنت تريد نظرة أسرع، فستجد أمثلة المباريات ومعاينات الألعاب وأزرار الانتقال السريع قريبة من بعضها لكي تبقى مسارات الرياضة والكازينو سهلة الوصول على هاتفك. الواجهة نفسها متاحة بالإنجليزية والفرنسية والعربية على نفس الرابط العام.",
+      "ميلبيت الجزائر صفحة هبوط موجهة للجوال للوصول السريع إلى كرة القدم المباشرة وألعاب الكازينو والعروض الحالية. من الصفحة الرئيسية يمكنك الانتقال إلى أسواق الرياضة، وتصفح أقسام الكازينو والسلوتس، وفتح الألعاب المباشرة، ومراجعة خيارات الرياضات الإلكترونية بدون مسار طويل. كما يجمع الرابط العام نفسه فئات المكافآت وأمثلة المباريات وتبديل اللغة في مكان قريب حتى تتمكن من مقارنة المسارات الأساسية قبل المتابعة.",
+    summaryLabel: "إجابة سريعة",
+    summaryPoints: [
+      "تبقى أمثلة كرة القدم المباشرة والتشكيلات والأسواق والأسعار البارزة ظاهرة على الصفحة الرئيسية.",
+      "تجتمع بطاقات الكازينو والسلوتس والألعاب المباشرة والرياضات الإلكترونية ضمن مسار واحد للجوال.",
+      "تعرض الصفحة بالفعل فئات مكافأة الترحيب وتعزيز كرة القدم والكاش باك ومكافأة VIP.",
+      "تتوفر الواجهة بالإنجليزية والفرنسية والعربية على نفس الرابط العام.",
+    ],
     tableTitle: "دليل سريع للصفحة",
     columns: {
       area: "القسم",

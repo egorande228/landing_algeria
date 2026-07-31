@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { useEffect, useState } from "react";
 import {
   casinoCardsByLanguage,
   homeCopy as copy,
@@ -175,41 +174,7 @@ function PhoneMockup() {
   const { language } = useLanguage();
   const isArabic = language === "ar";
   const ui = homeSurfaceCopy[language as HomeLanguage];
-  const loopedMatches = [...liveMatches, liveMatches[0]];
-  const [activeMatchIndex, setActiveMatchIndex] = useState(0);
-  const [transitionEnabled, setTransitionEnabled] = useState(true);
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setActiveMatchIndex((current) => current + 1);
-    }, 3800);
-
-    return () => window.clearInterval(intervalId);
-  }, []);
-
-  useEffect(() => {
-    if (transitionEnabled) {
-      return;
-    }
-
-    const frameId = window.requestAnimationFrame(() => {
-      setTransitionEnabled(true);
-    });
-
-    return () => window.cancelAnimationFrame(frameId);
-  }, [transitionEnabled]);
-
-  const visibleMatchIndex =
-    activeMatchIndex === liveMatches.length ? 0 : activeMatchIndex;
-
-  const handleTrackTransitionEnd = () => {
-    if (activeMatchIndex !== liveMatches.length) {
-      return;
-    }
-
-    setTransitionEnabled(false);
-    setActiveMatchIndex(0);
-  };
+  const featuredMatch = liveMatches[0];
 
   return (
     <div
@@ -303,39 +268,26 @@ function PhoneMockup() {
 
             <div
               dir="ltr"
-              className="relative z-10 flex h-full"
-              style={{
-                transform: `translate3d(-${activeMatchIndex * 100}%, 0, 0)`,
-                transition: transitionEnabled
-                  ? "transform 760ms cubic-bezier(0.22, 1, 0.36, 1)"
-                  : "none",
-              }}
-              onTransitionEnd={handleTrackTransitionEnd}
+              className="relative z-10 h-full"
             >
-              {loopedMatches.map((match, matchIndex) => (
-                <div
-                  key={`${match.league}-${matchIndex}`}
-                  className="relative h-full min-w-full overflow-hidden"
-                >
-                  <MatchCard match={match} ui={ui} isArabic={isArabic} />
-                </div>
-              ))}
+              <div className="relative h-full overflow-hidden">
+                <MatchCard match={featuredMatch} ui={ui} isArabic={isArabic} />
+              </div>
             </div>
 
             <div className="pointer-events-none absolute inset-0 z-20 rounded-[24px] shadow-[inset_0_10px_14px_rgba(255,255,255,0.06)]" />
             <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-10 rounded-t-[24px] bg-gradient-to-b from-white/10 to-transparent" />
           </div>
 
-          <div className="mt-3 flex items-center justify-center gap-2">
-            {liveMatches.map((match, matchIndex) => (
+          <div className="mt-3 flex items-center justify-center gap-2" aria-hidden="true">
+            {liveMatches.slice(0, 3).map((match, matchIndex) => (
               <span
                 key={`${match.league}-indicator`}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  matchIndex === visibleMatchIndex
+                  matchIndex === 0
                     ? "w-6 bg-[#2BB673]"
                     : "w-2 bg-white/18"
                 }`}
-                aria-hidden="true"
               />
             ))}
           </div>
@@ -750,6 +702,21 @@ function HomeGuideSection() {
               <p className="mt-4 max-w-4xl text-[16px] leading-8 text-white/68">
                 {guide.intro}
               </p>
+              <div className="mt-6 rounded-[24px] border border-white/8 bg-black/16 p-5 sm:p-6">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#8EE8B6]">
+                  {guide.summaryLabel}
+                </div>
+                <ul className="mt-4 grid gap-3 text-[15px] leading-7 text-white/70 sm:grid-cols-2">
+                  {guide.summaryPoints.map((point) => (
+                    <li
+                      key={point}
+                      className="rounded-[18px] border border-white/8 bg-white/[0.03] px-4 py-3"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <div className="mt-8 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
                 <div className="overflow-hidden rounded-[24px] border border-white/8 bg-black/16">

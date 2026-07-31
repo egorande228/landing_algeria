@@ -3,7 +3,8 @@ import { CONTACT_EMAIL, TELEGRAM_LINK } from "./links";
 export const SITE_URL = "https://algeria-melbet.com";
 export const SITE_NAME = "Melbet Algeria";
 export const SITE_LOCALE_LANGUAGES = ["en", "fr", "ar"] as const;
-export const LAST_REVIEWED = "2026-07-29";
+export const HOME_LAST_REVIEWED = "2026-07-31";
+export const PARTNERSHIP_LAST_REVIEWED = "2026-07-29";
 
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -65,7 +66,7 @@ export function getHomePageSeoGraph() {
         author: {
           "@id": ORGANIZATION_ID,
         },
-        dateModified: LAST_REVIEWED,
+        dateModified: HOME_LAST_REVIEWED,
         description: homeSeo.description,
         inLanguage: [...SITE_LOCALE_LANGUAGES],
         isPartOf: {
@@ -98,7 +99,7 @@ export function getPartnershipPageSeoGraph() {
         author: {
           "@id": ORGANIZATION_ID,
         },
-        dateModified: LAST_REVIEWED,
+        dateModified: PARTNERSHIP_LAST_REVIEWED,
         description: partnershipSeo.description,
         inLanguage: [...SITE_LOCALE_LANGUAGES],
         isPartOf: {

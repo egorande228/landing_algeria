@@ -57,9 +57,9 @@ export default function RootLayout({
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-82437M124J"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics-G-82437M124J" strategy="afterInteractive">
+        <Script id="google-analytics-G-82437M124J" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             window.gtag = window.gtag || function(){window.dataLayer.push(arguments);}

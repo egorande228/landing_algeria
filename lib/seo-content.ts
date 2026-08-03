@@ -12,13 +12,13 @@ const WEBSITE_ID = `${SITE_URL}/#website`;
 export const homeSeo = {
   title: "Melbet Algeria: Live Football, Casino Games, and Offers",
   description:
-    "Explore live football, casino games, slots, live games, esports, and available offers on Melbet Algeria from one mobile-first landing page.",
+    "Compare live football, casino games, slots, live games, esports, and current offers on Melbet Algeria with fast mobile access.",
 } as const;
 
 export const partnershipSeo = {
   title: "Melbet Algeria Partnership: Partner and Agent Routes",
   description:
-    "Review the Melbet Algeria partnership page for partner and agent routes, onboarding steps, reporting, and direct Telegram or email contact.",
+    "Talk with Melbet Algeria about partner and agent routes, onboarding steps, reporting, and direct Telegram or email contact.",
 } as const;
 
 export function getGlobalSeoGraph() {

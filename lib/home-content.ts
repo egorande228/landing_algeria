@@ -270,24 +270,28 @@ export const rewardGalleryCardsByLanguage = {
       title: "Welcome bonus",
       text: "Begin with a welcome offer when you are ready to make your first move.",
       imageSrc: "/rewards/welcome.jpg",
+      alt: "Welcome bonus reward artwork",
     },
     {
       kicker: "For match day",
       title: "Football boost",
       text: "Use football boosts on the games you are already following.",
       imageSrc: "/rewards/football.jpg",
+      alt: "Football boost reward artwork",
     },
     {
       kicker: "Keep going",
       title: "Cashback",
       text: "Take advantage of cashback offers when you want another reason to stay in the game.",
       imageSrc: "/rewards/cashback.jpg",
+      alt: "Cashback reward artwork",
     },
     {
       kicker: "Exclusive route",
       title: "VIP reward",
       text: "Unlock a more exclusive experience with VIP-style rewards and perks.",
       imageSrc: "/rewards/vip.jpg",
+      alt: "VIP reward artwork",
     },
   ],
   fr: [
@@ -296,24 +300,28 @@ export const rewardGalleryCardsByLanguage = {
       title: "Bonus de bienvenue",
       text: "Commencez avec une offre de bienvenue quand vous etes pret a faire votre premiere action.",
       imageSrc: "/rewards/welcome.jpg",
+      alt: "Visuel du bonus de bienvenue",
     },
     {
       kicker: "Pour le jour de match",
       title: "Boost football",
       text: "Profitez des boosts football sur les matchs que vous suivez deja.",
       imageSrc: "/rewards/football.jpg",
+      alt: "Visuel du boost football",
     },
     {
       kicker: "Rester dans le jeu",
       title: "Cashback",
       text: "Profitez du cashback quand vous voulez une bonne raison de continuer.",
       imageSrc: "/rewards/cashback.jpg",
+      alt: "Visuel du cashback",
     },
     {
       kicker: "Voie exclusive",
       title: "Recompense VIP",
       text: "Accedez a une experience plus exclusive avec des avantages au style VIP.",
       imageSrc: "/rewards/vip.jpg",
+      alt: "Visuel de la recompense VIP",
     },
   ],
   ar: [
@@ -322,24 +330,28 @@ export const rewardGalleryCardsByLanguage = {
       title: "مكافأة الترحيب",
       text: "ابدأ بعرض ترحيبي عندما تكون جاهزاً لأول خطوة.",
       imageSrc: "/rewards/welcome.jpg",
+      alt: "صورة مكافأة الترحيب",
     },
     {
       kicker: "ليوم المباراة",
       title: "تعزيز كرة القدم",
       text: "استفد من تعزيزات كرة القدم على المباريات التي تتابعها بالفعل.",
       imageSrc: "/rewards/football.jpg",
+      alt: "صورة تعزيز كرة القدم",
     },
     {
       kicker: "واصل اللعب",
       title: "كاش باك",
       text: "استفد من عروض الكاش باك عندما تريد سبباً إضافياً لمواصلة الجلسة.",
       imageSrc: "/rewards/cashback.jpg",
+      alt: "صورة عرض الكاش باك",
     },
     {
       kicker: "مسار حصري",
       title: "مكافأة VIP",
       text: "ادخل إلى تجربة أكثر تميزاً مع مكافآت ومزايا بطابع VIP.",
       imageSrc: "/rewards/vip.jpg",
+      alt: "صورة مكافأة VIP",
     },
   ],
 } as const;
@@ -349,6 +361,7 @@ export type RewardCardData = {
   title: string;
   text: string;
   imageSrc: string;
+  alt: string;
 };
 
 export const sportsShowcaseCopy = {
@@ -404,21 +417,21 @@ export const sportsShowcaseCopy = {
 
 export const homeGuideByLanguage = {
   en: {
-    bylineLabel: "By",
+    bylineLabel: "Reviewed by",
     bylineValue: "Melbet Algeria",
-    languageLabel: "Languages",
+    languageLabel: "Available in",
     languageValue: "English, French, and Arabic",
-    reviewedLabel: "Reviewed",
+    reviewedLabel: "Last reviewed",
     reviewedValue: "2026-07-31",
     title: "What can you do on Melbet Algeria?",
     intro:
-      "Melbet Algeria is a mobile-first landing page for quick access to live football, casino games, and current offers. From the homepage you can move into sports markets, open casino and slots sections, check live games, and review esports options without a long route. The same public URL keeps reward categories, live-match examples, and language switching close together so visitors can compare the main routes before they leave the landing page.",
-    summaryLabel: "Quick homepage answer",
+      "On Melbet Algeria you can move quickly into live football, casino games, slots, live tables, esports, and current offers from one mobile-first route. Start with sports if you want live match examples, lineups, changing odds, and featured markets close together. Open casino when you want roulette, blackjack, slots, or live games without extra browsing. Check the offers area when you want to compare welcome bonus, football boost, cashback, and VIP reward categories before your next session. The same public URL also lets you switch between English, French, and Arabic, so you can keep the same route while choosing the language that feels easiest to follow. If you want the fastest next step, use the sports or casino action near the top and move straight into the route that fits what you want to play.",
+    summaryLabel: "Quick answer",
     summaryPoints: [
-      "Live football examples, lineups, markets, and featured odds stay visible on the homepage.",
-      "Casino, slots, live games, and esports cards are grouped into one mobile-first flow.",
-      "The page highlights welcome bonus, football boost, cashback, and VIP reward categories already visible across the site.",
-      "English, French, and Arabic interfaces are available on the same public URL.",
+      "Follow live football examples, lineups, markets, and featured odds without leaving the main route.",
+      "Move from sports into casino, slots, live games, and esports with short, clear next steps.",
+      "Compare four visible offer categories before you choose your next session.",
+      "Switch between English, French, and Arabic on the same public URL.",
     ],
     tableTitle: "Quick page guide",
     columns: {
@@ -451,36 +464,36 @@ export const homeGuideByLanguage = {
       {
         question: "How do you start on mobile?",
         answer:
-          "Use the main sports or casino action near the top of the page, then move straight into the route you want without a long signup-style flow on the landing page itself.",
+          "Tap the main sports or casino action near the top. From there you can move straight into the route you want.",
       },
       {
         question: "Which sections are visible from the homepage?",
         answer:
-          "The homepage keeps sports, casino games, offers, and a final mobile call to action in one public flow so you can scan the main areas before choosing your next step.",
+          "You can move between sports, casino games, offers, and the final mobile action without leaving the public URL.",
       },
       {
         question: "Which offer categories are highlighted here?",
         answer:
-          "The reward area highlights four offer categories already used across the page: welcome bonus, football boost, cashback, and VIP reward.",
+          "The offer area keeps four categories in view: welcome bonus, football boost, cashback, and VIP reward.",
       },
     ],
   },
   fr: {
-    bylineLabel: "Par",
+    bylineLabel: "Verifie par",
     bylineValue: "Melbet Algerie",
-    languageLabel: "Langues",
+    languageLabel: "Disponible en",
     languageValue: "Anglais, francais et arabe",
-    reviewedLabel: "Revision",
+    reviewedLabel: "Derniere revision",
     reviewedValue: "2026-07-31",
     title: "Que pouvez-vous faire sur Melbet Algerie ?",
     intro:
-      "Melbet Algerie est une landing page mobile pour acceder rapidement au football en direct, aux jeux de casino et aux offres en cours. Depuis l'accueil, vous pouvez ouvrir les marches sport, parcourir les sections casino et slots, lancer les jeux live et consulter l'esports sans trajet inutile. La meme URL publique garde aussi les categories d'offres, les exemples de matchs et le changement de langue a portee de main pour comparer les routes principales avant de continuer.",
-    summaryLabel: "Reponse rapide",
+      "Sur Melbet Algerie, vous pouvez acceder rapidement au football en direct, aux jeux de casino, aux slots, aux tables live, a l'esports et aux offres en cours depuis un meme parcours mobile. Commencez par le sport si vous voulez garder sous les yeux des exemples de matchs, des compositions, des cotes qui bougent et des marches mis en avant. Ouvrez le casino si vous cherchez roulette, blackjack, slots ou jeux live sans navigation inutile. Consultez aussi les offres pour comparer bonus de bienvenue, boost football, cashback et recompense VIP avant votre prochaine session. La meme URL publique vous laisse enfin passer de l'anglais au francais ou a l'arabe, pour suivre le meme parcours dans la langue la plus simple pour vous.",
+    summaryLabel: "Reponse directe",
     summaryPoints: [
-      "Les exemples de football live, compositions, marches et cotes visibles restent reunis sur l'accueil.",
-      "Casino, slots, jeux live et esports sont regroupes dans le meme parcours mobile.",
-      "La page met deja en avant bonus de bienvenue, boost football, cashback et recompense VIP.",
-      "Les interfaces anglais, francais et arabe restent disponibles sur la meme URL publique.",
+      "Gardez football live, compositions, marches et cotes visibles sur le meme parcours.",
+      "Passez du sport au casino, aux slots, aux jeux live et a l'esports en peu d'etapes.",
+      "Comparez quatre categories d'offres visibles avant de continuer.",
+      "Basculez entre anglais, francais et arabe sur la meme URL publique.",
     ],
     tableTitle: "Guide rapide de la page",
     columns: {
@@ -513,36 +526,36 @@ export const homeGuideByLanguage = {
       {
         question: "Comment commencer sur mobile ?",
         answer:
-          "Utilisez l'action sport ou casino en haut de page, puis entrez directement dans la route qui vous interesse sans parcours long sur la landing page.",
+          "Utilisez le bouton sport ou casino en haut de page. Vous entrez ensuite directement dans la route qui vous interesse.",
       },
       {
         question: "Quelles sections sont visibles depuis l'accueil ?",
         answer:
-          "L'accueil rassemble sport, jeux casino, offres et CTA mobile final dans un seul flux public pour comparer les zones principales avant de continuer.",
+          "Vous pouvez passer entre sport, jeux casino, offres et action mobile finale sans quitter l'URL publique.",
       },
       {
         question: "Quelles categories d'offres sont mises en avant ?",
         answer:
-          "La zone recompenses met en avant quatre categories deja visibles sur la page: bonus de bienvenue, boost football, cashback et recompense VIP.",
+          "La zone recompenses garde quatre categories visibles: bonus de bienvenue, boost football, cashback et recompense VIP.",
       },
     ],
   },
   ar: {
-    bylineLabel: "بواسطة",
+    bylineLabel: "تمت المراجعة بواسطة",
     bylineValue: "ميلبيت الجزائر",
-    languageLabel: "اللغات",
+    languageLabel: "متاح بـ",
     languageValue: "الإنجليزية والفرنسية والعربية",
-    reviewedLabel: "تمت المراجعة",
+    reviewedLabel: "آخر مراجعة",
     reviewedValue: "2026-07-31",
     title: "ماذا يمكنك أن تفعل على ميلبيت الجزائر؟",
     intro:
-      "ميلبيت الجزائر صفحة هبوط موجهة للجوال للوصول السريع إلى كرة القدم المباشرة وألعاب الكازينو والعروض الحالية. من الصفحة الرئيسية يمكنك الانتقال إلى أسواق الرياضة، وتصفح أقسام الكازينو والسلوتس، وفتح الألعاب المباشرة، ومراجعة خيارات الرياضات الإلكترونية بدون مسار طويل. كما يجمع الرابط العام نفسه فئات المكافآت وأمثلة المباريات وتبديل اللغة في مكان قريب حتى تتمكن من مقارنة المسارات الأساسية قبل المتابعة.",
-    summaryLabel: "إجابة سريعة",
+      "على ميلبيت الجزائر يمكنك الوصول بسرعة إلى كرة القدم المباشرة وألعاب الكازينو والسلوتس والطاولات المباشرة والرياضات الإلكترونية والعروض الحالية من مسار واحد مناسب للجوال. ابدأ من الرياضة إذا كنت تريد أمثلة مباريات مباشرة وتشكيلات وأسعاراً متغيرة وأسواقاً بارزة في مكان قريب. افتح الكازينو إذا كنت تبحث عن الروليت أو البلاك جاك أو السلوتس أو الألعاب المباشرة بدون تصفح طويل. راجع قسم العروض إذا كنت تريد مقارنة مكافأة الترحيب وتعزيز كرة القدم والكاش باك ومكافأة VIP قبل جلستك التالية. كما يتيح لك الرابط العام نفسه التبديل بين الإنجليزية والفرنسية والعربية حتى تتابع المسار نفسه باللغة الأسهل لك.",
+    summaryLabel: "إجابة مباشرة",
     summaryPoints: [
-      "تبقى أمثلة كرة القدم المباشرة والتشكيلات والأسواق والأسعار البارزة ظاهرة على الصفحة الرئيسية.",
-      "تجتمع بطاقات الكازينو والسلوتس والألعاب المباشرة والرياضات الإلكترونية ضمن مسار واحد للجوال.",
-      "تعرض الصفحة بالفعل فئات مكافأة الترحيب وتعزيز كرة القدم والكاش باك ومكافأة VIP.",
-      "تتوفر الواجهة بالإنجليزية والفرنسية والعربية على نفس الرابط العام.",
+      "تابع أمثلة كرة القدم المباشرة والتشكيلات والأسواق والأسعار ضمن المسار نفسه.",
+      "انتقل من الرياضة إلى الكازينو والسلوتس والألعاب المباشرة والرياضات الإلكترونية بخطوات قصيرة.",
+      "قارن أربع فئات عروض ظاهرة قبل اختيار جلستك التالية.",
+      "بدّل بين الإنجليزية والفرنسية والعربية على الرابط العام نفسه.",
     ],
     tableTitle: "دليل سريع للصفحة",
     columns: {
@@ -575,17 +588,17 @@ export const homeGuideByLanguage = {
       {
         question: "كيف تبدأ من الجوال؟",
         answer:
-          "استخدم زر الرياضة أو الكازينو في أعلى الصفحة، ثم انتقل مباشرة إلى المسار الذي تريده بدون خطوات طويلة داخل صفحة الهبوط نفسها.",
+          "استخدم زر الرياضة أو الكازينو في أعلى الصفحة. بعد ذلك تنتقل مباشرة إلى المسار الذي تريده.",
       },
       {
         question: "ما الأقسام الظاهرة من الصفحة الرئيسية؟",
         answer:
-          "تجمع الصفحة الرئيسية الرياضة وألعاب الكازينو والعروض والدعوة النهائية للجوال ضمن مسار عام واحد ليسهل عليك مقارنة الأقسام الأساسية قبل المتابعة.",
+          "يمكنك الانتقال بين الرياضة وألعاب الكازينو والعروض والدعوة النهائية للجوال من دون مغادرة الرابط العام.",
       },
       {
         question: "ما فئات العروض التي تظهر هنا؟",
         answer:
-          "قسم المكافآت يبرز أربع فئات موجودة بالفعل على الصفحة: مكافأة الترحيب، وتعزيز كرة القدم، والكاش باك، ومكافأة VIP.",
+          "يبقي قسم العروض أربع فئات ظاهرة أمامك: مكافأة الترحيب، وتعزيز كرة القدم، والكاش باك، ومكافأة VIP.",
       },
     ],
   },
